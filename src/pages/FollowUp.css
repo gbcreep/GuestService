@@ -1,0 +1,68 @@
+.followup-container {
+    padding: 20px;
+    font-family: 'Calibri', sans-serif;
+  }
+  
+  .followup-container h2 {
+    margin-bottom: 16px;
+    color: var(--hilton-blue, #104C97);
+    font-size: 1.8rem;
+  }
+  
+  .task {
+    background-color: var(--hilton-light, #f9fafb);
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+  
+  .task.expired {
+    border-color: #CE3262;
+    background-color: #fdecea;
+  }
+  
+  .task p {
+    margin: 6px 0;
+    font-size: 1rem;
+  }
+  
+  .task p strong {
+    color: var(--hilton-blue, #104C97);
+  }
+  
+  .actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  
+  .actions button {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Postponi button: primary blue */
+  .actions button:nth-child(1) {
+    background-color: var(--hilton-blue, #009cde);
+  }
+  .actions button:nth-child(1):hover {
+    background-color: var(--hilton-dark, #0393d1);
+  }
+  
+  /* Follow Up button: accent red */
+  .actions button:nth-child(2) {
+    background-color: var(--hilton-accent, #CE3262);
+  }
+  .actions button:nth-child(2):hover {
+    background-color: #a4224c;
+  }
+  

@@ -1,0 +1,128 @@
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  width: 400px;
+  max-width: 95%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  font-family: 'Calibri', sans-serif;
+  color: #333;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #104c97; /* Blu Hilton */
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  font-size: 0.9rem;
+  font-family: 'Calibri', sans-serif;
+  transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #104c97;
+  outline: none;
+  background-color: #fff;
+}
+
+.popup-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.operator-info {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 20px;
+  text-align: center;
+  
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn {
+  background-color: #104c97;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'Calibri', sans-serif;
+  transition: background-color 0.2s;
+}
+
+.save-btn:hover {
+  background-color: #08356b;
+}
+
+.cancel-btn {
+  background-color: #ce3262;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'Calibri', sans-serif;
+  transition: background-color 0.2s;
+}
+
+.cancel-btn:hover {
+  background-color: #a02347;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

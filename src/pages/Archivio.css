@@ -1,0 +1,150 @@
+/* Archivio.css - stile abbellito */
+.archivio-container {
+    font-family: 'Calibri', sans-serif;
+    padding: 2rem;
+    background-color: #f9fafb;
+  }
+  
+  .archivio-container h1 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #104C97;
+    margin-bottom: 1.5rem;
+  }
+  .archivio-container h1::before {
+    content: "📚";
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .top-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .top-actions .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .filters input,
+  .filters select {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    transition: border-color 0.2s;
+  }
+  .filters input:focus,
+  .filters select:focus {
+    outline: none;
+    border-color: #104C97;
+    box-shadow: 0 0 0 3px rgba(16, 76, 151, 0.2);
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+  .btn:hover {
+    transform: translateY(-1px);
+  }
+  .btn-primary {
+    background-color: #009cde;
+    color: #ffffff;
+  }
+  .btn-primary:hover {
+    background-color: #0190ce;
+  }
+  .btn-secondary {
+    background-color: #EF7622;
+    color: #fff;
+  }
+  .btn-secondary:hover {
+    background-color: #db6f02;
+  }
+  .btn-accent {
+    background-color: #CE3262;
+    color: #ffffff;
+  }
+  .btn-accent:hover {
+    background-color: #a4224c;
+  }
+  
+  .table-wrapper {
+    background: #ffffff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+  }
+  th {
+    background-color: #f1f5f9;
+    color: #374151;
+    font-weight: 600;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  tbody tr {
+    transition: background-color 0.2s;
+  }
+  tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+  }
+  tbody tr:hover {
+    background-color: #eef4ff;
+  }
+  
+  thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  @media print {
+    .top-actions,
+    .filters {
+      display: none;
+    }
+    .archivio-container {
+      padding: 0;
+    }
+}
+ 
+  .btn-edit {
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    font-size: 0.7rem;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s, transform 0.1s;
+}
+  .btn-edit {
+    background-color: #EF7622;
+    color: #fff;
+  }
+  .btn-edit:hover {
+    background-color: #db6f02;
+  }

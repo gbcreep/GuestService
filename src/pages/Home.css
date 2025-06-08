@@ -1,0 +1,95 @@
+.home-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: #104c97; /* Blu Hilton */
+  color: white;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: -80px;
+  margin-top: -30px;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+.menu-button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  background-color: #fff;
+  color: #104c97;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Calibri', sans-serif;
+  
+}
+
+.menu2-button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  background-color: #EF7622;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Calibri', sans-serif;
+  
+}
+
+.logout-button {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.8rem;
+  background-color: #009cde; /* Rosso piatto */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'Calibri', sans-serif;
+  }
+
+.logout-button:hover {
+  background-: #84235E;
+}
+
+.main-content {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 2rem;
+}
+
+.username {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin: 40px 0px; /* spaziatura sopra e sotto */
+  font-size: 1.3em;
+  font-family: 'Calibri', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

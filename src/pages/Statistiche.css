@@ -1,0 +1,61 @@
+/* src/pages/Statistiche.css */
+.statistiche-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .statistiche-container h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #104C97;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .stats-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  
+  .stats-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #ddd;
+  }
+  
+  .stats-list .item {
+    font-weight: 600;
+  }
+  
+  .stats-list .count {
+    font-size: 1.1rem;
+    color: #CE3262;
+  }
+  
+  .refresh-btn {
+    display: block;
+    margin: 1rem auto 0;
+    background-color: #D4AF37;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .refresh-btn:hover {
+    background-color: #b5942d;
+  }
+  
+  .error {
+    color: #e74c3c;
+    text-align: center;
+  }
+  
