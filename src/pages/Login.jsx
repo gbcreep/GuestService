@@ -11,7 +11,7 @@ export default function Login() {
     e.preventDefault();
     if (username.trim()) {
       // Salva l'username in localStorage
-      localStorage.setItem("username", username);
+      localStorage.setItem("guest_service_operator", username);
       navigate("/home");
     } else {
       alert("Per favore inserisci il tuo nome");

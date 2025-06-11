@@ -18,7 +18,7 @@ function App() {
         <Route path="/" element={<Login />} />
 
         {/* Se non loggato, redirect alla login */}
-        {!isLoggedIn && <Route path="*" element={<Navigate to="/login" />} />}
+        {!isLoggedIn && <Route path="*" element={<Navigate to="/" />} />}
 
         {/* Se loggato, accesso alle pagine */}
         {isLoggedIn && (
