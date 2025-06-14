@@ -1,26 +1,23 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NewRequestPopup from "./NewRequestPopup";
 import FollowUp from "./FollowUp";
 import Archivio from "./Archivio";
-import Stats from "./Statistiche";
+import Statistiche from "./Statistiche";
 import logo from "../assets/sbbw.webp";
 import "./Home.css";
 
 export default function Home() {
+  // Legge subito l'utente salvato in login
+  const user = localStorage.getItem("guest_service_operator") || "";
   const [showNewRequest, setShowNewRequest] = useState(false);
   const [tasks, setTasks] = useState([]);
-  const username = localStorage.getItem("username");
   const navigate = useNavigate();
-  
-  // Chiudi la finestra popup
-  const handleClose = () => {
-    setShowNewRequest(false);
-  };
 
-  // Salva la nuova richiesta
+  const handleClose = () => setShowNewRequest(false);
+
   const handleSave = (newTask) => {
-    setTasks((prevTasks) => [...prevTasks, newTask]);
+    setTasks((prev) => [...prev, newTask]);
     setShowNewRequest(false);
   };
 
@@ -29,41 +26,33 @@ export default function Home() {
       <div className="sidebar">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />
-          <p className="username">{username}</p>
+          <p className="username">{user}</p>
         </div>
-        <button onClick={() => setShowNewRequest(true)} className="menu-button">
+        <button className="menu-button" onClick={() => setShowNewRequest(true)}>
           Nuova Richiesta
         </button>
-        
-        <button
-          onClick={() => navigate("/archivio")}
-          className="menu-button"
-        >
+        <button className="menu-button" onClick={() => navigate("/archivio")}>
           Archivio
         </button>
-        
-        <button
-          onClick={() => navigate("/statistiche")}
-          className="menu2-button"
-        >
+        <button className="menu2-button" onClick={() => navigate("/statistiche")}>
           Stats
         </button>
-
         <button
-          onClick={() => (window.location.href = "/")}
           className="menu-button logout-button"
+          onClick={() => {
+            localStorage.removeItem("guest_service_operator");
+            window.location.href = "/";
+          }}
         >
           Logout
         </button>
       </div>
-
       <div className="main-content">
-        <FollowUp tasks={tasks} username={username} />
+        <FollowUp tasks={tasks} username={user} />
       </div>
-
       {showNewRequest && (
         <NewRequestPopup
-          currentUser={username}
+          currentUser={user}
           onClose={handleClose}
           onSave={handleSave}
         />

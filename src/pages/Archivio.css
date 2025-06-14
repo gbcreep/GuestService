@@ -142,9 +142,12 @@
     transition: background-color 0.2s, transform 0.1s;
 }
   .btn-edit {
-    background-color: #EF7622;
+    background-color: #fff;
+    border-radius: 5px;
     color: #fff;
+    border: 2px solid #FFA500; /* bordo arancione */
   }
+  
   .btn-edit:hover {
     background-color: #db6f02;
   }

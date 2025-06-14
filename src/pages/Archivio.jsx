@@ -137,7 +137,23 @@ export default function Archivio() {
                 <td>{r.operatoreguestservice}</td>
                 <td>{r.follow_up || '-'}</td>
                 <td>{r.follow_up_operator || '-'}</td>
-                <td>{r.follow_up_time ? new Date(r.follow_up_time).toLocaleString() : '-'}</td>
+               <td>
+  {r.follow_up_time
+    ? new Date(r.follow_up_time).toLocaleString(
+        'it-IT',
+        {
+          timeZone: 'Europe/Rome',
+          hour12: false,             // usa 24 h
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        }
+      )
+    : '-'}
+</td> 
                 <td>
                   <button className="btn-edit" onClick={() => handleEdit(r)}>✏️</button>
                 </td>
