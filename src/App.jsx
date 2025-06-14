@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from './pages/Home';
 //import GuestRequestForm from './pages/GuestRequestForm';
 import FollowUp from './pages/FollowUp';
@@ -11,7 +11,7 @@ function App() {
   const isLoggedIn = localStorage.getItem('guest_service_operator');
 
   return (
-    <Router>
+    <HashRouter>
       <Notificatore />
       <Routes>
         {/* Login sempre accessibile */}
@@ -30,7 +30,7 @@ function App() {
             </>
         )}
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 

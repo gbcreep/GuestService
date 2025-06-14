@@ -9,11 +9,17 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+  
+    console.log("→ Tentativo di login:", username);
     if (username.trim()) {
-      // Salva l'username in localStorage
       localStorage.setItem("guest_service_operator", username);
-      navigate("/home");
+      console.log("✔️ Salvato in localStorage:", username);
+  
+      console.log("↪️ Cambio hash a #/home");
+      window.location.href = `${window.location.origin}/#/home`;
+  
     } else {
+      console.log("⚠️ Username vuoto");
       alert("Per favore inserisci il tuo nome");
     }
   };
