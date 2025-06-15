@@ -75,7 +75,7 @@ export default function FollowUp({ username }) {
           <p><strong>Camera:</strong> {t.numeroCamera}</p>
           <p><strong>Richiesta:</strong> {t.richiesta}</p>
           <p><strong>Reparto:</strong> {t.reparto}</p>
-          <p><strong>Operatore:</strong> {t.operatoreguestservice}</p>
+          <p><strong>Operatore:</strong> {t.operatoreTask}</p>
           <p>
             <strong>Scadenza:</strong>{" "}
             {Math.max(
